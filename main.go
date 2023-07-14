@@ -7,7 +7,6 @@ import (
 	"github.com/arkrz/v2sub/ping"
 	"github.com/arkrz/v2sub/template"
 	"github.com/arkrz/v2sub/types"
-	"os"
 	"os/exec"
 	"sort"
 	"time"
@@ -61,10 +60,10 @@ func main() {
 		return
 	}
 
-	if os.Getuid() != 0 {
-		fmt.Println("plz run v2sub as root")
-		return
-	}
+	//if os.Getuid() != 0 {
+	//	fmt.Println("plz run v2sub as root")
+	//	return
+	//}
 
 	if flags.quick {
 		flags.ping = false
